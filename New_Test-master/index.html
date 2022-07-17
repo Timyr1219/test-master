@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/css_anime/media.css">
+
+    <!-- Font Awesome Icon Library -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Font Awesome Icon Library -->
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="page-wrapper">
+            <div class="sign_up">
+                <div class="sign_up-group">
+                    <p class="have_an">Have an account?<a href="#">Log</a></p>
+                    <div class="card-bitmap mask mask_1">
+                        <div class="text-sign-1">
+                            <h1 class="sign_up-text">Sign up</h1>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h1 class="titel_card">New user?</h1>
+                        <p class="titel_card-1">User the form below to create your account.</p>
+                        <button id="login" class="button blue" onclick="ClearFields()">
+                            <span>Complete signup</span>
+                        </button>
+                        <div class="input-card">
+                            <form method="POST">
+                                <div class="row row-space_1">
+                                    <div class="input-group">
+                                        <label class="label">First Name</label>
+                                        <input class="input--style-4" id="textRia" type="text" name="first_name">
+                                    </div>
+                                    <div class="input-group">
+                                        <label class="label" >Last Name</label>
+                                        <input class="input--style-4" id="textRia-1" type="text" name="last_name">
+                                    </div>
+                                </div>
+                                <div class="row row-space_1">
+                                    <div class="input-group">
+                                        <label class="label">Nationality</label>
+                                        <select name="user_profile_color_2" class="input--style-4" required="required">
+                                            <option value="">Белорусь</option>
+                                            <option value="1">Россия</option>
+                                            <option value="2">Узбекистан</option>
+                                            <option value="3">Америка</option>
+                                            <option value="4">Китай</option>
+                                            <option value="5">Англия</option>
+                                            <option value="6">Германия</option>
+                                          </select>
+                                    </div>
+                                    <div class="input-group">
+                                        <label class="label">E-mail</label>
+                                        <input class="input--style-4" id="email" type="email" name="email" value="">
+                                        <div class="span"></div>
+                                    </div>
+                                </div>                            
+                                <div class="row row-space_1">
+                                    <div class="input-group">
+                                        <label class="label">Data of Birth</label>
+                                        <div class="input-grou">
+                                            <div class="i-c_1">
+                                                <select class="input--style-5" id="number">
+                                                    <option value="ru"></option>
+                                                </select>
+                                            </div>
+                                            <div class="i-c_1">
+                                                <select name="user_profile_color_2" class="input--style-5" id="input_data-time" required="required">
+                                                    <option value="">Январь</option>
+                                                    <option value="1">Февраль</option>
+                                                    <option value="2">Март</option>
+                                                    <option value="3">Апрель</option>
+                                                    <option value="4">Май</option>
+                                                    <option value="5">Июнь</option>
+                                                    <option value="6">Июль</option>
+                                                    <option value="7">Август</option>
+                                                    <option value="8">Сентябрь</option>
+                                                    <option value="9">Октябрь</option>
+                                                    <option value="10">Ноябарь</option>
+                                                    <option value="11">Декабрь</option>
+                                                </select>
+                                            </div>
+                                            <div class="i-c_1">
+                                                <select name="user_profile_color_2" class="input--style-5" id="input_data-time" required="required">
+                                                    <option value=""></option>
+                                                </select>
+                                            </div>
+                                        </div> 
+                                    </div>
+                                    <div class="input-group">
+                                        <label class="label">Gender</label>
+                                        <div class="p-t-10">
+                                            <label class="radio-container m-r-45 label" >Male
+                                                <input type="radio" checked="checked" name="gender">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                            <label class="radio-container m-r-45 label" >Female
+                                                <input type="radio" checked="checked" name="gender">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row row-space_1">
+                                    <div class="input-group">
+                                        <label class="label">Password</label>
+                                        <input class="input--style-4" id="textRia-2" type="password" name="password">
+                                    </div>
+                                    <div class="input-group">
+                                        <label class="label">Confirm Password</label>
+                                        <input class="input--style-4" id="textRia-3" type="password" name="password">
+                                    </div>
+                                </div>
+                            </form>
+                        </div> 
+                    </div>
+                </div> 
+            </div>
+        </div>
+    </div>
+
+<script src="js/global.js"></script>
+<script src="http://code.jquery.com/jquery-2.0.2.min.js"></script>
+<script>
+    $(document).ready(function(){
+        //Скрыть PopUp при загрузке страницы    
+        PopUpHide();
+    });
+    //Функция отображения PopUp
+    function PopUpShow(){
+        $("#popup1").show();
+    }
+    //Функция скрытия PopUp
+    function PopUpHide(){
+        $("#popup1").hide();
+    }
+</script>
+
+</body>
+</html>
+
+
